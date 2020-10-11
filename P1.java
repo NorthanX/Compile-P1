@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.ArrayList;
 
 public class P1 {
     public static void main(String[] args) throws Exception{
@@ -43,9 +42,9 @@ public class P1 {
                 sSymbol = S.substring(loc-token+1,loc+1);
                 if(sSymbol.equals("BEGIN")||sSymbol.equals("END")||sSymbol.equals("FOR")
                         ||sSymbol.equals("IF")||sSymbol.equals("THEN") ||sSymbol.equals("ELSE")){
-                    char[] cSymbol=sSymbol.toCharArray();
+                    char[] cSymbol = sSymbol.toCharArray();
                     for(int i = 1;i < sSymbol.length();i++){
-                        cSymbol[i]+=32;
+                        cSymbol[i] = Character.toLowerCase(cSymbol[i]);
                     }
                     sSymbol = new String(cSymbol);
                     System.out.println(sSymbol);
