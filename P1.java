@@ -12,7 +12,7 @@ public class P1 {
         String sSymbol = "";
 
         while ((sRead =bufferedReader.readLine()) != null) {
-            stringBuilder.append(sRead + "\n");
+            stringBuilder.append(sRead).append("\n");
         }
         bufferedReader.close();
 
